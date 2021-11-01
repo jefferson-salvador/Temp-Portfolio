@@ -1,0 +1,106 @@
+body::after {
+    content: "";
+    background-color: #222;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    position: absolute;
+    position: fixed;
+    z-index: -1;   
+    overflow: hidden;
+}
+
+.nav{
+    background-color: #22504e;
+    top: 0;
+    left: 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav a{
+    border: 1px solid white;
+    margin:10px 15px;
+    width: 150px;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;    
+    background-color: #1f2833;
+    border: 1px solid #66fcf200;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Roboto', 'Arial', 'sans-serif';
+    transition: all 1s ease;
+}
+
+nav a:hover{
+    border: 1px solid #66fcf2;
+    box-shadow: 1px 1px 5px black;
+}
+
+nav .current{
+    border: 1px solid #66fcf2;
+    box-shadow: 1px 1px 5px black;
+}
+
+.content{
+    width: 860px;
+    margin: 100px auto 0px auto;
+    z-index: 2;
+    text-align: center;
+}
+
+.gallery{
+    width: 270px;
+    height: 310px;
+    float: left;
+    margin: 5px;
+}
+
+#cat{
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    transition: all 1s ease;
+}
+
+.gallery:hover #cat{
+    -webkit-filter: invert(0);
+    filter: invert(0);
+}
+
+.gallery img{
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+    width: 100%;
+    height: auto;
+    border: 2px solid #66666642;
+    transition: all 1s ease;
+}
+
+.gallery:hover img{
+    border: 2px solid #66fcf1;
+    box-shadow: 1px 1px 5px black;
+}
+
+.desc{
+    padding: 10px;
+    text-align: center;
+    color: #f2f2f2 ;
+    font-family: 'Roboto', 'Arial', 'sans-serif';
+}
+
+@media only screen and (max-width:800px) and (min-width:320px){
+    .gallery{
+        width: 65vw;
+        margin: 20px auto;
+        height: 65vw;
+    }
+
+    .content{
+        width: 70%;
+    }
+}
